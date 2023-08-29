@@ -1,32 +1,20 @@
-import React from "react";
-// import { Link } from "react-router-dom";
 import { useState } from "react";
 import { searchForShows, searchForActors } from "../api/tvMaze";
+import SearchForm from "../components/SearchForm";
 
 function Home() {
-  const [searchStr, setSearchStr] = useState("");
   const [apiData, setApiData] = useState(null);
   const [apiDataError, setApiDataError] = useState(null);
-  const [searchOption, setSearchOption] = useState("shows");
 
-  const onInputChange = (ev) => {
-    setSearchStr(ev.target.value);
-  };
-  const onRadioChange = (ev) => {
-    setSearchOption(ev.target.value);
-  };
-
-  const onSearch = async (ev) => {
-    ev.preventDefault();
-
+  const onSearch = async ({ q, searchOption }) => {
     try {
       setApiDataError(null);
 
       if (searchOption === "shows") {
-        const result = await searchForShows(searchStr);
+        const result = await searchForShows(q);
         setApiData(result);
       } else {
-        const result = await searchForActors(searchStr);
+        const result = await searchForActors(q);
         setApiData(result);
       }
     } catch (error) {
@@ -53,30 +41,7 @@ function Home() {
     <div>
       <h1>Home Page</h1>
       <p>Welcome to our website's home page.</p>
-      <form onSubmit={onSearch}>
-        <input type="text" value={searchStr} onChange={onInputChange} />
-        <label>
-          Shows
-          <input
-            type="radio"
-            name="searchOption"
-            value="shows"
-            onChange={onRadioChange}
-            checked={searchOption === "shows"}
-          />
-        </label>
-        <label>
-          Actors
-          <input
-            type="radio"
-            name="searchOption"
-            value="actors"
-            onChange={onRadioChange}
-            checked={searchOption === "actors"}
-          />
-        </label>
-        <button type="submit">Search</button>
-      </form>
+      <SearchForm onSearch={onSearch} />
       <div>{renderApiData()}</div>
     </div>
   );
