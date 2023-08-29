@@ -6,3 +6,4 @@ const getApi = async (queryString) => {
 };
 
 export const searchForShows = (query) => getApi(`/search/shows?q=${query}`);
+export const searchForActors = (query) => getApi(`/search/people?q=${query}`);
