@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
 
 const LINKS = [
-  {
-    to: "/about",
-    data: "About Page",
-  },
-  {
-    to: "/contact",
-    data: "contact page",
-  },
+ 
   {
     to: "/",
-    data: "Home page",
+    data: "Home",
+  },
+  {
+    to: "/starred",
+    data:"Starred"
   },
 ];
 export default function nav() {

@@ -5,7 +5,7 @@ const ActorCard = ({ name, image, gender, birthday, deathday, country }) => {
         <img src={image} alt={name} />
       </div>
       <h1>{name} {!!gender && `(${gender})`}</h1>
-      <p>{country ? `comes from ${country}` : "Country Unknown"} </p>
+      <p>{country ? `From ${country}` : "Country Unknown"} </p>
       {!!birthday && <p>Born {birthday}</p> }
       {!!deathday && <p>Died {deathday}</p> }
     </div>

@@ -1,22 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 import MainLayout from "./components/mainLayout";
+import Starred from "./pages/Starred";
+import Show from "./pages/Show";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
+  const queryClient = new QueryClient()
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Route>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="starred" element={<Starred />} />
+          </Route>
 
-        <Route path="/*" element={<div>Route not Found!! </div>} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="/show/:showId" element={<Show />} />
+
+          <Route path="*" element={<div>Route not Found!! </div>} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

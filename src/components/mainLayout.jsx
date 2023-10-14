@@ -6,7 +6,6 @@ const MainLayout = () => {
   return (
     <div>
       <AppTitle />
-      Hello world
       <Navs />
       <Outlet />
     </div>

@@ -1,7 +1,7 @@
 export default function AppTitle(props) {
   const {
     title = "CinemaSync",
-    subTitle = "Search your movie or rate your movie",
+    subTitle = "Are you looking a for a movie or an actor ?",
   } = props;
   return (
     <div>
