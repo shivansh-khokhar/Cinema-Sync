@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 
-const ShowCard = ({ id, name, image, summary }) => {
+const ShowCard = ({ id, name, image, summary, onStarMeClick, isStarred }) => {
 
   // cutting the summary to 10 characters and removing "<p>" from the api data
   let summaryStripped = summary ?
@@ -15,8 +14,8 @@ const ShowCard = ({ id, name, image, summary }) => {
       <h1>{name}</h1>
       <p>{summaryStripped}</p>
       <div>
-        <Link to={`/show/${id}`}>Read more</Link>
-        <button type="button">Star me</button>
+        <a href={`/show/${id}`} target="_blank" rel="noreferrer">Read more</a>
+        <button type="button" onClick={()=>onStarMeClick(id)}>{isStarred? "Unstar Me" : "Star Me"}</button>
       </div>
       
     </div>

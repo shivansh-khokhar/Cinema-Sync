@@ -5,6 +5,7 @@ const ActorGrid = ({ actors }) => {
     <div>
       {actors.map((data) => (
         <ActorCard
+          key={data.person.id}
           id = {data.person.id}
           name = {data.person.name}
           image = { 

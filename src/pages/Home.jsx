@@ -6,8 +6,6 @@ import ActorGrid from "../components/Actors/ActorGrid";
 import { useQuery } from "@tanstack/react-query";
 
 function Home() {
-  // const [apiData, setApiData] = useState(null);
-  // const [apiDataError, setApiDataError] = useState(null);
   const [filter, setFilter] = useState();
 
   const { data: apiData, error: apiDataError } = useQuery({
