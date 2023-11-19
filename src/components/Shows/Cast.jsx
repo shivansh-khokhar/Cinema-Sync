@@ -26,6 +26,7 @@ export default Cast;
 
 const CastList = styled.div`
   display: flex;
+  color: #EDEBEB;
   flex-wrap: wrap;
   .cast-item {
     flex: 1 0 50%;

@@ -12,5 +12,6 @@ export default Details;
 const DetailsWrapper = styled.div`
   p {
     margin: 5px 0;
+    color: #EDEBEB;
   }
 `;

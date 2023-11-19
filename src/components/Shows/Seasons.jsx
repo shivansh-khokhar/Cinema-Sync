@@ -37,6 +37,7 @@ export default Seasons;
 const SeasonsWrapper = styled.div`
   p {
     margin: 5px 0;
+    color: #EDEBEB;
   }
 `;
 

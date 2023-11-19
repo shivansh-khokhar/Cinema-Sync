@@ -54,12 +54,13 @@ const ActionSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   a {
-    text-decoration-color: #000;
-    color: #000;
+    text-decoration-color: #FFF;
+    color: #FFF;
     &:hover {
-      text-decoration-color: blue;
-      color: blue;
+      text-decoration-color: purple;
+      color: purple;
     }
   }
 `;

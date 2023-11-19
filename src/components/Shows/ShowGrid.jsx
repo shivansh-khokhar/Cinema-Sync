@@ -26,7 +26,7 @@ const ShowGrid = ({ shows }) => {
           isStarred={starredShows.includes(data.show.id)}
         />
       ))}
-      ;
+      
     </FlexGrid>
   );
 };

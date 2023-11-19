@@ -17,7 +17,7 @@ const Starred = () => {
 
   if (starredShows && starredShows.length === 0) return <h1>No Shows Starred!</h1>;
 
-  if (starredShows && starredShows.length > 0) return <ShowGrid shows={starredShows} />;
+  if (starredShows && starredShows.length > 0) return <ShowGrid shows={starredShows} />
 
   if(starredShowsError) return <p>Error Occured {starredShowsError.message}</p>
 };
