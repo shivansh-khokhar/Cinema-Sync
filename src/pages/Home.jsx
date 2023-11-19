@@ -38,8 +38,8 @@ function Home() {
 
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Welcome to our website's home page.</p>
+      {/* <h1>Home Page</h1>
+      <p>Welcome to our website's home page.</p> */}
       <SearchForm onSearch={onSearch} />
       <div>{renderApiData()}</div>
     </div>
