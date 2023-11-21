@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Cinema-Sync/static/js/main.c034d740.js",
+    "main.js": "/Cinema-Sync/static/js/main.b4e12f27.js",
     "static/js/787.aeb5626a.chunk.js": "/Cinema-Sync/static/js/787.aeb5626a.chunk.js",
     "service-worker.js": "/Cinema-Sync/service-worker.js",
     "index.html": "/Cinema-Sync/index.html",
-    "main.c034d740.js.map": "/Cinema-Sync/static/js/main.c034d740.js.map",
+    "main.b4e12f27.js.map": "/Cinema-Sync/static/js/main.b4e12f27.js.map",
     "787.aeb5626a.chunk.js.map": "/Cinema-Sync/static/js/787.aeb5626a.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.c034d740.js"
+    "static/js/main.b4e12f27.js"
   ]
 }
